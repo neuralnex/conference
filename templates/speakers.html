@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/speaker.css"> <!-- Link to the external CSS file -->
+</head>
+<body class="bg-pink-500 text-white">
+    <nav class="space-x-4">
+        <a class="hover:text-pink-500" href="{{ url_for('index') }}">Home</a>
+        <a class="hover:text-pink-500" href="{{ url_for('speakers') }}">Speakers</a>
+        <a class="hover:text-pink-500" href="#">Location</a>
+        <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('register') }}">Register Now</a>
+    </nav>
+</div>
+    <div class="container mx-auto py-12">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold">Speakers</h1>
+            <p class="mt-4 text-lg">
+                Meet our honorable Speakers Who will guide you with their expertise and knowledge to becoming a profitbale Entreprenuer.
+            </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Anthony Doe" src="YOUR_IMAGE_URL_1" />
+                    <div class="flag-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                </div>
+                <h2>ANTHONY DOE</h2>
+                <p>GOOGLE INC</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Valerie Doe" src="YOUR_IMAGE_URL_2" />
+                </div>
+                <h2>VALERIE DOE</h2>
+                <p>WORDPRESS INC</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Michael Doe" src="YOUR_IMAGE_URL_3" />
+                </div>
+                <h2>MICHAEL DOE</h2>
+                <p>MOZILLA INC</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 4" src="YOUR_IMAGE_URL_4" />
+                </div>
+                <h2>SPEAKER 4</h2>
+                <p>COMPANY 4</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 5" src="YOUR_IMAGE_URL_5" />
+                </div>
+                <h2>SPEAKER 5</h2>
+                <p>COMPANY 5</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 6" src="YOUR_IMAGE_URL_6" />
+                </div>
+                <h2>SPEAKER 6</h2>
+                <p>COMPANY 6</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 7" src="YOUR_IMAGE_URL_7" />
+                </div>
+                <h2>SPEAKER 7</h2>
+                <p>COMPANY 7</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 8" src="YOUR_IMAGE_URL_8" />
+                </div>
+                <h2>SPEAKER 8</h2>
+                <p>COMPANY 8</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 9" src="YOUR_IMAGE_URL_9" />
+                </div>
+                <h2>SPEAKER 9</h2>
+                <p>COMPANY 9</p>
+            </div>
+            <div class="speaker-card">
+                <div class="relative inline-block">
+                    <img alt="Portrait of Speaker 10" src="YOUR_IMAGE_URL_10" />
+                </div>
+                <h2>SPEAKER 10</h2>
+                <p>COMPANY 10</p>
+            </div>
+        </div>
+    </div>
+</ body>
+</html>
