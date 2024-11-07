@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="static/css/register.css"> <!-- Link to external CSS file -->
 </head>
 <body class="bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?business,conference');">
+    <nav class="space-x-2">
+        <a  href="{{ url_for('index') }}">Home</a>
+        <a  href="{{ url_for('speakers') }}">Speakers</a>
+        <a  href="https://maps.app.goo.gl/QGwa5ezAbjvUMEje7">Location</a>
+        <a  href="{{ url_for('register') }}">Register Now</a>
+    </nav>
     <div class="bg-gray-800 bg-opacity-75 min-h-screen flex items-center justify-center">
         <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-2xl w-full">
             <h1 class="text-3xl font-bold text-center mb-4">Registration Form</h1>
             <p class="text-center mb-6">
-                This event will be holding on <strong>December 1st, 2024</strong> registration closes <strong>November 30, 2024</strong>. Invitations will be sent out <strong>after registration</strong>. The event will take place at the SMAT auditorium.
+                Please make sure to fill the form <strong>correctly</strong> as the information provided will be used to communicate with you, for more enquiries <strong>Please call</strong> Jace: <strong>09055785668</strong>
             </p>
             <form method="POST" action="{{ url_for('register') }}">
                 <div class="mb-4">
