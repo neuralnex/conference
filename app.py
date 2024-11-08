@@ -76,5 +76,9 @@ def register():
 def speakers():
     return render_template('speakers.html')
 
+@app.route('/schedule')
+def schedule():
+    return render_template('schedule.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
