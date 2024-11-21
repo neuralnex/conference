@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="static/css/register.css"> <!-- Link to external CSS file -->
 </head>
-<body class="bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?business,conference');">
-    <nav class="space-x-2">
-        <a  href="{{ url_for('index') }}">Home</a>
-        <a  href="{{ url_for('speakers') }}">Speakers</a>
-        <a  href="{{ url_for('schedule') }}">Schedule</a>
-        <a  href="https://maps.app.goo.gl/QGwa5ezAbjvUMEje7">Location</a>
-        <a  href="{{ url_for('register') }}">Register Now</a>
-    </nav>
-    <div class="bg-gray-800 bg-opacity-75 min-h-screen flex items-center justify-center">
+<body class="bg-cover bg-center" >
+    <header class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <img src="{{ url_for('static', filename='images/asict.png') }}" alt="asicts logo" class="h-10"> <!-- Adjust the height as needed -->
+            </div>
+            <nav class="space-x-2">
+                <a class="hover:text-pink-500" href="{{ url_for('index') }}">Home</a>
+                <a class="hover:text-pink-500" href="{{ url_for('speakers') }}">Speakers</a>
+                <a class="hover:text-pink-500" href="{{ url_for('schedule') }}">Schedule</a>
+                <a class="hover:text-pink-500" href="https://maps.app.goo.gl/QGwa5ezAbjvUMEje7">Location</a>
+                <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('register') }}">Register Now</a>
+            </nav>
+        </div>
+    </header>
+    <div class="bg-gradient-to-r from-purple-600 to-pink-500 bg-opacity-75 min-h-screen flex items-center justify-center">
         <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-2xl w-full">
             <h1 class="text-3xl font-bold text-center mb-4">Registration Form</h1>
             <p class="text-center mb-6">
@@ -82,5 +89,30 @@
             </form>
         </div>
     </div>
+
+    <section class="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <i class="fas fa-chalkboard-teacher text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">15</h3>
+                <p>Our Visionary Speakers</p>
+            </div>
+            <div>
+                <i class="fas fa-globe text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">300</h3>
+                <p>International Sponsors</p>
+            </div>
+            <div>
+                <i class="fas fa-microphone-alt text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">78</h3>
+                <p>Workshops We offer</p>
+            </div>
+            <div>
+                <i class="fas fa-ticket-alt text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">4,560</h3>
+                <p>Tickets Sold by our Organization</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

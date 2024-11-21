@@ -10,14 +10,20 @@
     <link rel="stylesheet" href="static/css/speaker.css"> <!-- Link to the external CSS file -->
 </head>
 <body class="bg-white text-gray-800">
-    <nav class="space-x-2">
-        <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('index') }}">Home</a>
-        <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('speakers') }}">Speakers</a>
-        <a class="bg-pink-500 text-white px-4 py-2 rounded" href="https://maps.app.goo.gl/QGwa5ezAbjvUMEje7">Location</a>
-        <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('schedule') }}">Schedule</a>
-        <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('register') }}">Register Now</a>
-    </nav>
-
+    <header class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <img src="{{ url_for('static', filename='images/asict.png') }}" alt="asicts logo" class="h-10"> <!-- Adjust the height as needed -->
+            </div>
+            <nav class="space-x-2">
+                <a class="hover:text-pink-500" href="{{ url_for('index') }}">Home</a>
+                <a class="hover:text-pink-500" href="{{ url_for('speakers') }}">Speakers</a>
+                <a class="hover:text-pink-500" href="{{ url_for('schedule') }}">Schedule</a>
+                <a class="hover:text-pink-500" href="https://maps.app.goo.gl/QGwa5ezAbjvUMEje7">Location</a>
+                <a class="bg-pink-500 text-white px-4 py-2 rounded" href="{{ url_for('register') }}">Register Now</a>
+            </nav>
+        </div>
+    </header>
     <div class="container mx-auto py-12">
         <div class="text-center mb-8">
             <h1 class="text-4xl font-bold">Speakers</h1>
@@ -101,5 +107,30 @@
             </div>
         </div>
     </div>
+
+    <section class="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <i class="fas fa-chalkboard-teacher text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">15</h3>
+                <p>Our Visionary Speakers</p>
+            </div>
+            <div>
+                <i class="fas fa-globe text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">300</h3>
+                <p>International Sponsors</p>
+            </div>
+            <div>
+                <i class="fas fa-microphone-alt text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">78</h3>
+                <p>Workshops We offer</p>
+            </div>
+            <div>
+                <i class="fas fa-ticket-alt text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold">4,560</h3>
+                <p>Tickets Sold by our Organization</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
