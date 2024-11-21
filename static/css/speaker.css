@@ -7,9 +7,9 @@ body {
 }
 
 .speaker-card img {
-    border-radius: 50%;
+    border-radius: 0;
     width: 150px;
-    height: 150px;
+    height: 200px;
 }
 
 .speaker-card h2 {
