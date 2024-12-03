@@ -66,7 +66,6 @@ def register():
         subject = 'Your Ticket ID'
         body = f"Hello {first_name} {last_name},\n\nYour ticket ID is: {ticket_id}\n\nThank you for registering!"
         send_email(email, subject, body)
-
         flash('Registration successful! A ticket ID has been sent to your email.', 'success')
         return redirect(url_for('index'))
 

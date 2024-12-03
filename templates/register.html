@@ -114,5 +114,27 @@
             </div>
         </div>
     </section>
+    <script>
+        // Get flashed messages
+        const flashedMessages = {{ get_flashed_messages(with_categories=True) | tojson | safe }};
+        
+        // Check if there's a flash message
+        if (flashedMessages.length > 0) {
+            const flashContent = document.getElementById('flash-content');
+            const flashDiv = document.getElementById('flash-message');
+
+            // Get the first flashed message and its category
+            const [category, message] = flashedMessages[0];
+
+            flashContent.textContent = message; // Set the message content
+            flashDiv.className = `fixed top-0 left-1/2 transform -translate-x-1/2 z-50 p-4 rounded-lg ${category === 'success' ? 'bg-green-500' : 'bg-red-500'}`; // Set class based on category
+            flashDiv.style.display = 'block'; // Show the flash message
+
+            // Hide the flash message after 3 seconds
+            setTimeout(() => {
+                flashDiv.style.display = 'none';
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
