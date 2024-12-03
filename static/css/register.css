@@ -109,3 +109,22 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
+
+/* Responsive styles for navigation */
+@media (max-width: 640px) {
+    nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    nav a {
+        width: 100%; /* Make each navigation item full-width */
+        text-align: center; /* Center the text */
+        padding: 0.5rem 0; /* Add padding for better touch targets */
+        margin-bottom: 10px; /* Add some space between items */
+    }
+
+    .bg-black {
+        padding: 1rem; /* Ensure padding is consistent */
+    }
+}
