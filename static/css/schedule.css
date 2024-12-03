@@ -1,3 +1,115 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* schedule.css */
+
+/* Ensure body takes full height and has no margin */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Use the imported Roboto font */
+}
+
+/* Header styles */
+header {
+    width: 100%; /* Make header full width */
+}
+
+/* Main container styles */
+.bg-white {
+    border-radius: 8px; /* Rounded corners for the main container */
+}
+
+/* Add some shadow to the main container */
+.shadow-lg {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styles */
+.text-gray-800 {
+    color: #2d3748; /* Darker gray for better contrast */
+}
+
+/* Header background color */
+.bg-black {
+    background-color: #000; /* Black background for header */
+}
+
+/* Navigation link styles */
+nav a {
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Styles for the footer */
+.bg-purple-600 {
+    background-color: #6b46c1; /* Purple background for footer */
+    color: white; /* White text color for footer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .p-8 {
+        padding: 4px; /* Reduce padding on smaller screens */
+    }
+
+    .text-4xl {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Additional styles for the schedule section */
+.flex-1 {
+    /* Removed overflow-y: auto; to prevent scrolling */
+    flex-grow: 1; /* Allow this section to grow and fill space */
+}
+
+/* Styles for the schedule items */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; /* Add padding between schedule items */
+}
+
+.font-bold {
+    font-weight: 700; /* Bold text */
+}
+
+.text-sm {
+    font-size: 0.875rem; /* Smaller text size */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Larger text size */
+}
+
+.text-xl {
+    font-size: 1.25rem; /* Extra large text size */
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* Margin bottom for spacing */
+}
+
+.p-8 {
+    padding: 2rem; /* Padding for sections */
+}
+
+.px-4 {
+    padding-left: 1rem; /* Horizontal padding */
+    padding-right: 1rem; /* Horizontal padding */
+}
+
+.py-2 {
+    padding-top: 0.5rem; /* Vertical padding */
+    padding-bottom: 0.5rem; /* Vertical padding */
+}
+
+.rounded {
+    border-radius: 0.375rem; /* Rounded corners */
+}
+
+/* Add hover effects to buttons */
+.bg-pink-500 {
+    background-color: #ec4899; /* Pink background for buttons */
+}
+
+.bg-pink-500:hover {
+    background-color: #d53f8c; /* Darker pink on hover */
 }
