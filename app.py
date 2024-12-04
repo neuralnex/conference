@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import random
 import string
+import requests
 import os
 import smtplib
 from email.mime.text import MIMEText
@@ -45,6 +46,7 @@ def send_email(to, subject, body):
 def index():
     return render_template('index.html')
 
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -66,6 +68,14 @@ def register():
         subject = 'Your Ticket ID'
         body = f"Hello {first_name} {last_name},\n\nYour ticket ID is: {ticket_id}\n\nThank you for registering!"
         send_email(email, subject, body)
+
+        # Prepare data to send to Google Sheets
+        data = [first_name, last_name, home_phone, state, email, department, address, attendance, reason, ticket_id]
+        
+        # Send data to Google Sheets
+        google_sheets_url = "https://script.google.com/macros/s/AKfycbx6F5lU-DS_ffwhnOSa3rRFwfAKAwdaNxWl-jeuKSWonA6yNy5IUJf4ySPAuxm-11Cj/exec"  # Replace with your actual web app URL
+        requests.post(google_sheets_url, json={'data': data})
+
         flash('Registration successful! A ticket ID has been sent to your email.', 'success')
         return redirect(url_for('index'))
 
