@@ -74,7 +74,18 @@ def register():
         
         # Send data to Google Sheets
         google_sheets_url = "https://script.google.com/macros/s/AKfycbx6F5lU-DS_ffwhnOSa3rRFwfAKAwdaNxWl-jeuKSWonA6yNy5IUJf4ySPAuxm-11Cj/exec"  # Replace with your actual web app URL
-        requests.post(google_sheets_url, json={'data': data})
+              # Send data to Google Sheets
+        response = requests.post(google_sheets_url, data={
+            'first-name': first_name,
+            'last-name': last_name,
+            'phone': home_phone,
+            'state': state,
+            'email': email,
+            'department': address,
+            'address': address,
+            'attendance': attendance,
+            'reason': reason
+        })
 
         flash('Registration successful! A ticket ID has been sent to your email.', 'success')
         return redirect(url_for('index'))
